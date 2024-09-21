@@ -39,8 +39,11 @@ function App() {
   }
 
   function evaluate() {
-    const result = eval(equation);
-    setEquation(prev => prev += `=${result}`)
+    if (regSymbols.test(equation[equation.length-1]))
+    {
+      const result = eval(equation);
+      setEquation(prev => prev += `=${result}`)
+    }
   }
 
   const topDisp = equation.replaceAll("*", "·");    // replace * with · for the top display
