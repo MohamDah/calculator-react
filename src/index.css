@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: #C2C2D6;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.calc-container {
+    background-color: #000;
+    width: 320px;
+    height: 400px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border: 2px solid #47476B;
+    padding: 5px;
+}
+
+/* display */
+
+.calc-disp {
+    font-family: 'Digital-7 Mono', sans-serif;
+    height: 55px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    padding: 0;
+    padding-bottom: 5px;
+}
+
+
+.calc-disp-top {
+    color:#FFA500;
+    line-height: 1rem;
+}
+
+.calc-disp-bottom {
+    font-size: 1.8rem;
+}
+
+
+/* keypad */
+
+.keypad {
+    font-family: "Share Tech Mono", monospace;
+    height: calc(100% - 55px);
+    display: grid;
+    grid-template: 
+        'ac ac . .'
+        '. . . .'
+        '. . . .'
+        '. . . equals'
+        'zero zero . equals';
+    gap: 1px;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.keypad > * {
+    background-color: #4D4D4D;
+    color: #fff;
+    font-family: "Share Tech Mono", monospace;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 1px solid transparent;
+    border: none;
+}
+
+.keypad > *:active {
+    transform: none;
+}
+
+.keypad > *:hover {
+    outline: 1px solid #808080;
+    color: #000;
+}
+
+.ac {
+    grid-area: ac;
+    background-color: #AC3939;
+}
+
+.equals {
+    grid-area: equals;
+}
+
+.zero {
+    grid-area: zero;
+}
+
+
+.divide,
+.mult,
+.sub,
+.add {
+    background-color: #666666;
+}
+
+.equals {
+    background-color: #004466;
+}
+
+
+/* credit */
+.credit {
+    color: #000;
+    font-family: "Share Tech Mono", monospace;
+    position: absolute;
+    transform: translate(-50%, 0);
+    left: 50%;
+    top: calc(50% + 210px)
+}
+
+.credit small {
+    margin-top: 6px;
+    display: block;
+    text-align: center;
+}
