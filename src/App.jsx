@@ -91,8 +91,8 @@ function App() {
       </div>
     </div>
     <p className='credit'>
-      Coded by <a href='https://github.com/MohamDah'>Mohamed Dahab</a>
-      <small>Check the <a href="https://github.com/MohamDah/calculator-react">source code</a></small>
+      Coded by <a target="_blank" href='https://github.com/MohamDah'>Mohamed Dahab</a>
+      <small>Check the <a target="_blank" href="https://github.com/MohamDah/calculator-react">source code</a></small>
     </p>
     </>
   )
