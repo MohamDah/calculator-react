@@ -4,8 +4,8 @@ A simple calculator built with React + Vite and CSS.
 
 ## Project Screen Shot(s)
 
-[image of app 1](./src/assets/preview1.png)
-[image of app 2](./src/assets/preview2.png)
+![image of app 1](./src/assets/preview1.png)
+![image of app 2](./src/assets/preview2.png)
 
 ## Reflection
 This is my first project to do all by myself after learning React. It's not too complicated, although there were some parts related to logic that were a little annoying to figure out.
