@@ -39,7 +39,7 @@ function App() {
   }
 
   function evaluate() {
-    if (regSymbols.test(equation[equation.length-1]))
+    if (!regSymbols.test(equation[equation.length-1]))
     {
       const result = eval(equation);
       setEquation(prev => prev += `=${result}`)
@@ -53,11 +53,12 @@ function App() {
     bottomDisp = equation[equation.length-1];
     bottomDisp = bottomDisp.replace("*", "X");
   } else if (equation !== "") {
-    let temp = equation.split("=");
+    let temp = equation.split(regSymbols);
     bottomDisp = temp[temp.length-1];
   } else {
     bottomDisp = "0";
-  } // if the last character in "equation" is a sybmol
+  } // if the last character in "equation" is a sybmol, display the symbol
+    // if equation is not empty, display last number or result
 
 
 
